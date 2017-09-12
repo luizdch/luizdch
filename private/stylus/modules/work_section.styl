@@ -1,0 +1,214 @@
+.work.card {
+   background-color $color-gray2
+
+
+
+
+
+   .card-title {
+      @media $y-1 {
+         padding-top $space-1
+      }
+   }
+
+
+
+
+   $numberOfWorks = 3
+   .work-slider {
+      max-width 550px
+      margin-top $space-4
+      @media $y-1 {
+         margin-top $space-2
+      }
+      @media (max-width 350px) and (max-height 480px) {
+         margin-top $space-1
+      }
+   }
+   .overflow-container {
+      overflow hidden
+   }
+   .workSlider-container {
+      flex-direction row
+      align-self flex-start
+      align-items stretch
+      width 100% * $numberOfWorks
+   }
+   .work-container {
+      opacity 0
+      transition opacity 1s ease
+   }
+   for $workIndex in (0..$numberOfWorks - 1) {
+      .workSlider-container.js-work{$workIndex}-selected {
+         transform translateX(-100% / $numberOfWorks * $workIndex)
+      }
+      .workSlider-container.js-work{$workIndex}-selected .work-container:nth-child({$workIndex + 1}) {
+         opacity 1
+      }
+   }
+   .work-icon {
+      margin auto 0
+      @media (max-width 350px) and (max-height 480px) {
+         margin-top $space-2
+      }
+   }
+   .artistsTheme-icon {
+      width 90px
+      @media $x-1 {
+         width 60px
+      }
+      @media $y-1 {
+         width 40px
+      }
+      @media (max-width 350px) and (max-height 480px) {
+         width 40px
+      }
+   }
+   .travisNeilson-icon {
+      width 100px
+      @media $x-1 {
+         width 70px
+      }
+      @media $y-1 {
+         width 50px
+      }
+      @media (max-width 350px) and (max-height 480px) {
+         width 50px
+      }
+   }
+   .fhoke-icon {
+      width 250px
+      @media $x-1 {
+         width 170px
+      }
+      @media $y-1 {
+         width 150px
+      }
+      @media (max-width 350px) and (max-height 480px) {
+         width 150px
+      }
+   }
+   .work-slider p {
+      margin-top $space-3
+      font-size $font-3
+      text-align center
+      @media $y-1 {
+         margin-top $space-2
+         font-size $font-2
+      }
+      @media (max-width 350px) and (max-height 480px) {
+         font-size $font-2
+      }
+      @media (max-width 350px) and (max-height 370px) {
+         display none
+      }
+   }
+   .workSite-button {
+      margin-top $space-3
+      padding 5px 10px
+      background-color $color-blue1
+      color $color-white1
+      font-size $font-3
+      border-radius 3px
+      @media $y-1 {
+         margin-top $space-2
+         font-size $font-2
+      }
+      @media (max-width 350px) and (max-height 480px) {
+         font-size $font-2
+      }
+   }
+   .links-container {
+      justify-content center
+      margin-top $space-2
+      @media $x-2 {
+         flex-direction row
+      }
+   }
+   .link-container {
+      flex-direction row
+      width auto
+   }
+   .link-container:last-child {
+      @media $x-1 {
+         margin-top $space-1
+      }
+   }
+   .link-container a {
+      margin-top $space-1
+      @media $y-1 {
+         font-size $font-2
+      }
+      @media (max-width 350px) and (max-height 480px) {
+         font-size $font-2
+      }
+   }
+   .link-container:first-child {
+      @media $x-2 {
+         margin-right $space-4
+      }
+   }
+   .link-container svg {
+      width 20px
+      margin-right $space-1
+      margin-top 3px
+   }
+   .slide-button {
+      position absolute
+      top 45%
+      transform translateY(-50%)
+      transition opacity .8s ease
+      @media $y-1 {
+         width 30px
+      }
+      @media $y-2 {
+         width 50px
+      }
+      @media $x-1 {
+         width 40px
+         top 71%
+      }
+      @media (max-width 350px) and (max-height 370px) {
+         top 40%
+      }
+   }
+   .slideLeft-button {
+      left 0
+      transform translateX(-200%)
+      @media $y-1 {
+         transform translateX(-150%)
+      }
+      @media $y-2 {
+         transform translateX(-200%)
+      }
+      @media (max-width 800px) {
+         transform translateX(-120%)
+      }
+      @media $x-1 {
+         left 20%
+      }
+   }
+   .slideRight-button {
+      right 0
+      @media $y-1 {
+         transform translateX(150%)
+      }
+      @media $y-2 {
+         transform translateX(200%)
+      }
+      @media (max-width 800px) {
+         transform translateX(120%)
+      }
+      @media $x-1 {
+         right 20%
+      }
+   }
+   .slideRight-button svg {
+      transform rotate(180deg)
+   }
+   .slide-button.js-hide {
+      opacity 0
+      pointer-events none
+   }
+
+}

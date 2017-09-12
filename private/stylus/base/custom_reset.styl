@@ -1,0 +1,43 @@
+// general
+*, *:before, *:after {
+   box-sizing border-box
+   position relative
+   margin 0
+   padding 0
+   user-select none
+}
+html, body {
+ 	height 100%
+	overflow hidden
+}
+body, div, section, header, footer, nav, aside, main, form {
+   display flex
+   flex-direction column
+   align-items center
+   width 100%
+}
+button {
+   appearance none
+   background-color transparent
+   border none
+   outline none
+   cursor pointer
+}
+img, h1, h2, h3, p, svg {
+   width 100%
+}
+h1, h2, h3, p, a {
+	font-family 'Roboto', sans-serif
+	color $color-gray1
+	font-weight 300
+}
+a {
+  text-decoration none
+  color $color-blue1
+}
+button::-moz-focus-inner {
+  border 0
+}
+a, button {
+  -webkit-tap-highlight-color transparent
+}

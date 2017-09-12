@@ -1,0 +1,47 @@
+.luizdch:before {
+   content ''
+   position absolute
+   width 100%
+   height 100%
+   background-color rgba($color-black1, .7)
+}
+.luizdch video {
+   position absolute
+   min-width 100%
+   min-height 100%
+   z-index -1
+}
+.luizdch h1, .luizdch h2 {
+   font-family 'Josefin Sans', sans-serif
+   text-align center
+   color $color-white1
+}
+.luizdch h1 {
+   font-size $font-5
+   word-spacing $space-1
+}
+.luizdch h1 span {
+   font-size $font-7
+}
+.luizdch h2 {
+   font-size $font-3
+}
+.arrow-button {
+   position absolute
+   width 40px
+   height 40px
+   bottom $space-2
+   transform rotate(-90deg)
+   animation calling 2s ease infinite
+}
+@keyframes calling {
+   0% {
+      color $color-white1
+   }
+   50% {
+      color $color-gray1
+   }
+   100% {
+      color $color-white1
+   }
+}

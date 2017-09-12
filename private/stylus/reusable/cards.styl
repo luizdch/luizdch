@@ -1,0 +1,41 @@
+.card {
+   overflow hidden
+   position absolute
+   justify-content center
+   @media $x-1 {
+      padding 0 $space-3
+   }
+
+   &:nth-of-type(1) ~ .card {
+      transform translateY(100%)
+      transition transform .8s ease
+   }
+   &.js-selected {
+      transform translateY(0) !important
+   }
+
+
+
+
+
+   .card-title {
+      display flex
+      width auto
+      margin-top auto
+      color: $color-brown1;
+      font-size: $font-7
+      @media $y-1 {
+         font-size $font-4
+      }
+      @media $x-1 {
+         font-size $font-6
+      }
+      @media $x-y-1 {
+         font-size $font-4
+      }
+      @media (max-width 350px) and (max-height 480px) {
+         font-size $font-4
+      }
+   }
+
+}

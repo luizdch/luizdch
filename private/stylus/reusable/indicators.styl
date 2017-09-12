@@ -1,0 +1,32 @@
+.cardIndex-indicator {
+   flex-direction row
+   justify-content space-between
+   width 100px
+   margin auto 0 $space-2 0
+
+   button {
+      display flex
+      justify-content center
+      align-items center
+      width 15px
+      height 15px
+      border-radius 50%
+   }
+   button:before {
+      content ''
+      display flex
+      width 5px
+      height 5px
+      border-radius 50%
+      background-color $color-gray1
+   }
+   button.selected {
+      border 1px solid $color-gray1
+   }
+   &:hover button {
+      border none
+   }
+   button:hover {
+      border 1px solid $color-gray1
+   }
+}

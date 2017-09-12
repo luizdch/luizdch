@@ -1,0 +1,23 @@
+.aboutMe.card {
+   background-color white
+
+   p {
+      max-width 650px
+      margin-top $space-5
+      font-size $font-4
+      line-height 1.4
+      text-align justify
+      @media $x-1 {
+         margin-top $space-3
+         font-size $font-3
+      }
+      @media $y-1 {
+         font-size $font-2
+         margin-top $space-3
+      }
+      @media (max-width 350px) and (max-height 480px) {
+         font-size $font-2
+      }
+   }
+
+}
