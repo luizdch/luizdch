@@ -2,7 +2,7 @@ jQuery(function() {
 
    // custom events
    (function intervalMouseWheelEventRecursion() {
-      $(document).on('mousewheel', function() {
+      $(document).on('mousewheel', function(event) {
          if(event.deltaY < 0) $(document).trigger('c-intervalMouseWheelUp')
          else $(document).trigger('c-intervalMouseWheelDown')
          $(document).off('mousewheel')

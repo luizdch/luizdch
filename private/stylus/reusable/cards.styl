@@ -2,8 +2,10 @@
    overflow hidden
    position absolute
    justify-content center
+   left 0
+   padding-bottom 25px
    @media $x-1 {
-      padding 0 $space-3
+      padding 0 $space-3 25px $space3
    }
 
    &:nth-of-type(1) ~ .card {
@@ -21,8 +23,8 @@
    .card-title {
       display flex
       width auto
-      margin-top auto
-      color: $color-brown1;
+
+      color: $color-brown1
       font-size: $font-7
       @media $y-1 {
          font-size $font-4
