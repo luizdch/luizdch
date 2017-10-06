@@ -402,13 +402,13 @@ a,button {
 
 @media (max-width: 800px) {
   .work.card .slideLeft-button {
-    -ms-transform: translateX(-120%);
-        transform: translateX(-120%);
+    -ms-transform: translateX(-170%);
+        transform: translateX(-170%);
   }
 
   .work.card .slideRight-button {
-    -ms-transform: translateX(120%);
-        transform: translateX(120%);
+    -ms-transform: translateX(170%);
+        transform: translateX(170%);
   }
 }
 
