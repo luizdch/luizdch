@@ -114,6 +114,7 @@ jQuery(function() {
 jQuery(function() {
 
    // custom events
+   var setDelay = true;
    (function intervalMouseWheelEventRecursion() {
       $(document).on('mousewheel', function(event) {
          if(event.deltaY < 0) $(document).trigger('c-intervalMouseWheelUp')
@@ -121,17 +122,19 @@ jQuery(function() {
          $(document).off('mousewheel')
          setTimeout(function() {
             intervalMouseWheelEventRecursion()
-         }, 800)
+         }, setDelay ? 800 : 0)
       })
    })()
 
    var currentSelectedCardIndex = 0
 
    $(document).on('c-intervalMouseWheelUp swipedown', function() {
+      setDelay = currentSelectedCardIndex === 0 ? false : true
       $('.card').eq(currentSelectedCardIndex).removeClass('js-selected')
       if(currentSelectedCardIndex > 0) currentSelectedCardIndex--
    })
    $(document).on('c-intervalMouseWheelDown swipeup', function() {
+      setDelay = currentSelectedCardIndex === 3 ? false : true
       if(currentSelectedCardIndex < 3) currentSelectedCardIndex++
       $('.card').eq(currentSelectedCardIndex).addClass('js-selected')
    })

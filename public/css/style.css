@@ -87,10 +87,10 @@ a,button {
   min-width: 100%;
   min-height: 100%;
   z-index: -1;
-  top: 0;
+  top: 50%;
   left: 50%;
-  -ms-transform: translateX(-50%);
-      transform: translateX(-50%);
+  -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
 }
 
 .luizdch h1,.luizdch h2 {
